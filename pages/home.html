@@ -12,7 +12,7 @@
     }
     body {
       font-family: -apple-system, "Helvetica Neue", sans-serif;
-      background-color: #f9f9f9;
+      background-color: white; /* Outside area is white */
     }
     .navbar {
       display: flex;
@@ -28,7 +28,6 @@
       color: #c80c86;
       font-family: Mier Demi;
       margin: 0 19px;
-      display: flex;
     }
     .search {
       display: flex;
@@ -65,27 +64,22 @@
       display: flex;
       align-items: center;
     }
-
     .navbar-buttons .divider {
       color: #ccc;
       font-size: 24px;
       line-height: 1;
     }
-
     .navbar-buttons .icon {
       font-size: 24px;
       color: grey;
       margin-right: 5px;
     }
-
     .download-btn:hover, .profile-btn:hover, .cart-btn:hover {
       color: #c80c86;
     }
-
     .navbar-buttons button:focus {
       outline: none;
     }
-
     .horizontal-menu-container {
       position: relative;
       background-color: #ffffff;
@@ -126,6 +120,24 @@
     }
     .carousel li:hover::after {
       width: 100%;
+    }
+    .rectangle {
+      width: 12in; /* Long left-side breadth */
+      height: 3.5in; /* Moderate height */
+      background-color: #F8F8FF; /* Light grey rectangle color */
+      margin: 35px auto; /* Centered vertically and horizontally */
+      border-radius: 5px; /* Optional rounded edges */
+      display: flex;
+      justify-content: flex-start; /* Align text to the left */
+      align-items: flex-start; /* Align text to the top */
+      padding-left: 50px; /* Add left padding */
+      padding-top: 0.45in; /* Reduce gap from top further */
+    }
+    .rectangle-text {
+      font-size: 40px;
+      color: #333; /* Dark gray text color for contrast */
+      font-weight: bold;
+      line-height: 1.2; /* Line height for spacing between lines */
     }
   </style>
 </head>
@@ -172,54 +184,11 @@
       </ul>
     </div>
   </header>
-
-  <script>
-    const container = document.querySelector('.horizontal-menu-container');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    container.addEventListener('mousedown', (e) => {
-      isDown = true;
-      container.classList.add('active');
-      startX = e.pageX - container.offsetLeft;
-      scrollLeft = container.scrollLeft;
-    });
-
-    container.addEventListener('mouseleave', () => {
-      isDown = false;
-      container.classList.remove('active');
-    });
-
-    container.addEventListener('mouseup', () => {
-      isDown = false;
-      container.classList.remove('active');
-    });
-
-    container.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - container.offsetLeft;
-      const walk = (x - startX) * 3;
-      container.scrollLeft = scrollLeft - walk;
-    });
-
-    container.addEventListener('touchstart', (e) => {
-      isDown = true;
-      startX = e.touches[0].pageX - container.offsetLeft;
-      scrollLeft = container.scrollLeft;
-    });
-
-    container.addEventListener('touchend', () => {
-      isDown = false;
-    });
-
-    container.addEventListener('touchmove', (e) => {
-      if (!isDown) return;
-      const x = e.touches[0].pageX - container.offsetLeft;
-      const walk = (x - startX) * 3;
-      container.scrollLeft = scrollLeft - walk;
-    });
-  </script>
+  <div class="rectangle">
+    <div class="rectangle-text">
+      Lowest Prices<br>
+      Best Quality Shopping.
+    </div>
+  </div>
 </body>
 </html>
