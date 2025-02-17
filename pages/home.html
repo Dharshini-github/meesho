@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meesho</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, "Helvetica Neue", sans-serif;
+      background-color: white; 
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo {
+      font-size: 50px;
+      font-weight: bold;
+      color: #c80c86;
+      font-family: Mier Demi;
+      margin: 0 19px;
+    }
+    .search {
+      display: flex;
+      width: 400px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-image: url('https://icons.veryicon.com/png/o/miscellaneous/icon-pack-vol-1/magnifying-glass-16.png');
+      background-position: left 15px center;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      font-size: 16px;
+      color: #333;
+      padding-left: 40px;
+    }
+    .search::placeholder {
+      color: #aaa;
+      font-size: 14px;
+    }
+    .navbar-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+    }
+    .navbar-buttons button {
+      background: none;
+      border: none;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-buttons .divider {
+      color: #ccc;
+      font-size: 24px;
+      line-height: 1;
+    }
+    .navbar-buttons .icon {
+      font-size: 24px;
+      color: grey;
+      margin-right: 5px;
+    }
+    .download-btn:hover, .profile-btn:hover, .cart-btn:hover {
+      color: #c80c86;
+    }
+    .navbar-buttons button:focus {
+      outline: none;
+    }
+    .horizontal-menu-container {
+      position: relative;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 20px;
+    }
+    .carousel {
+      display: flex;
+      white-space: nowrap;
+      list-style: none;
+      padding: 0;
+      gap: 15px;
+      margin: 0;
+    }
+    .carousel li {
+      padding: 15px;
+      font-size: 15px;
+      color: #333;
+      cursor: pointer;
+      white-space: nowrap;
+      border-radius: 5px;
+      display: inline-block;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .carousel li::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #c80c86;
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+    .carousel li:hover {
+      color: #c80c86;
+    }
+    .carousel li:hover::after {
+      width: 100%;
+    }
+    .rectangle {
+      width: 12in;
+      height: 3.5in; 
+      background-color: #F8F8FF; 
+      margin: 35px auto; 
+      border-radius: 5px; 
+      display: flex;
+      justify-content: space-between; 
+      align-items: centre; 
+      padding-left: 50px; 
+      overflow:hidden;
+    }
+    .rectangle-text {
+      font-size: 40px;
+      color: #333; 
+      font-weight: bold;
+      line-height: 1.2; 
+      padding-top:40px;
+    }
+   .rectangle-image {
+      width :550px;
+      height:100%;
+      border-radius:5px;
+      object-fit:cover;
+   }
+
+   
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">meesho</div>
+      <input type="text" class="search" placeholder="Try Saree, Kurti or Search by Product Code">
+      <div class="navbar-buttons">
+        <button class="download-btn">
+          <span class="icon">📱</span>
+          <span>Download App</span>
+        </button>
+        <span class="divider">|</span>
+        <button class="supplier-btn">Become a Supplier</button>
+        <span class="divider">|</span>
+        <button class="newsroom-btn">Newsroom</button>
+        <span class="divider">|</span>
+        <button class="profile-btn">
+          <span class="icon">👤</span>
+          <span>Profile</span>
+        </button>
+        <span class="divider">|</span>
+        <button class="cart-btn">
+          <span class="icon">🛒</span>
+          <span>Cart</span>
+        </button>
+      </div>
+    </div>
+    <div class="horizontal-menu-container">
+      <ul class="carousel">
+        <li>Women Ethnic</li>
+        <li>Women Western</li>
+        <li>Men</li>
+        <li>Kids</li>
+        <li>Home & Kitchen</li>
+        <li>Beauty & Health</li>
+        <li>Jewellery & Accessories</li>
+        <li>Bags & Footwear</li>
+        <li>Electronics</li>
+        <li>Sports & Fitness</li>
+        <li>Car & Motorbike</li>
+        
+      </ul>
+    </div>
+  </header>
+  <div class="rectangle">
+    <div class="rectangle-text">
+      Lowest Prices<br>
+      Best Quality Shopping.
+    </div>
+    <img src="./assets/images/meimg.webp" alt="Shopping Image" class="rectangle-image">
+
+
+  
+  </div>
+</body>
+</html>
