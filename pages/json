@@ -1,0 +1,15 @@
+[
+    {
+      "name": "Alisha Sensational Sarees",
+      "price": 450,
+      "image": "https://your-s3-bucket.amazonaws.com/images/alisha_saree.jpg"
+      
+    },
+    {
+      "name": "Chitrarekha Refined Kurtis",
+      "price": 577,
+      "image": "https://storage.googleapis.com/your-gcp-bucket/images/chitrarekha_kurti.png"
+      
+    }
+    
+  ]
