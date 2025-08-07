@@ -1,2 +1,3 @@
 # meesho
-This project is created using HTML, CSS, and JavaScript. I have developed several pages with the aim of enhancing the user interface and experience Website."meesho-dvdn.vercel.app"
+This project is created using HTML, CSS, and JavaScript. I have developed several pages with the aim of enhancing the user interface and experience Website. If you want to view click this "https://meesho-dvdn.vercel.app/"
+
